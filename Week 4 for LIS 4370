@@ -1,0 +1,9 @@
+Freq <- c(.6,.3,.4,.4,.2,.6,.3,.4,.9,.2)
+BP <-c(130,87,32,42,59,109,78,205,135,176)
+First<-c("bad","bad","bad","bad","good","good","good","NA","bad")
+Second<-c("low","low","high","high", "low", "low","high","high","high","high")
+finaldecision<-c("low","high","low","high","low","high","low","high","high","high")
+
+boxplot(Freq, BP)
+hist(Freq)
+hist(BP)
