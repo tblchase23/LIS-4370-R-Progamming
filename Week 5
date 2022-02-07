@@ -1,0 +1,87 @@
+ A<-matrix(1:100, nrow=10)
+> B<-matrix(1:1000, nrow=10)
+> C<-matrix(1:4, nrow =2)
+> D<-matrix(1:16, nrow = 4)
+> solve(A)
+Error in solve.default(A) : 
+  Lapack routine dgesv: system is exactly singular: U[6,6] = 0
+> solve(B)
+Error in solve.default(B) : 'a' (10 x 100) must be square
+> det(A)
+[1] 0
+> det(B)
+Error in determinant.matrix(x, logarithm = TRUE, ...) : 
+  'x' must be a square matrix
+> solve(A,B)
+Error in solve.default(A, B) : 
+  Lapack routine dgesv: system is exactly singular: U[6,6] = 0
+> solve(C)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> det(C)
+[1] -2
+> solve(D)
+Error in solve.default(D) : 
+  Lapack routine dgesv: system is exactly singular: U[3,3] = 0
+> det(D)
+[1] 0
+> D<-matrix(1:64, nrow = 8)
+> solve(A)
+Error in solve.default(A) : 
+  Lapack routine dgesv: system is exactly singular: U[6,6] = 0
+> solve(B)
+Error in solve.default(B) : 'a' (10 x 100) must be square
+> det(A)
+[1] 0
+> det(B)
+Error in determinant.matrix(x, logarithm = TRUE, ...) : 
+  'x' must be a square matrix
+> solve(A,B)
+Error in solve.default(A, B) : 
+  Lapack routine dgesv: system is exactly singular: U[6,6] = 0
+> solve(C)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> det(C)
+[1] -2
+> solve(D)
+Error in solve.default(D) : 
+  Lapack routine dgesv: system is exactly singular: U[4,4] = 0
+> det(D)
+[1] 0
+> D<-matrix(1:81, nrow = 9)
+> solve(D)
+Error in solve.default(D) : 
+  Lapack routine dgesv: system is exactly singular: U[3,3] = 0
+> det(D)
+[1] 0
+> A<-matrix(1:100, nrow=10)
+> B<-matrix(1:1000, nrow=10)
+> C<-matrix(1:4, nrow =2)
+> D<-matrix(1:81, nrow = 9)
+> solve(A)
+Error in solve.default(A) : 
+  Lapack routine dgesv: system is exactly singular: U[6,6] = 0
+> solve(B)
+Error in solve.default(B) : 'a' (10 x 100) must be square
+> det(A)
+[1] 0
+> det(B)
+Error in determinant.matrix(x, logarithm = TRUE, ...) : 
+  'x' must be a square matrix
+> solve(A,B)
+Error in solve.default(A, B) : 
+  Lapack routine dgesv: system is exactly singular: U[6,6] = 0
+> solve(C)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> det(C)
+[1] -2
+> solve(D)
+Error in solve.default(D) : 
+  Lapack routine dgesv: system is exactly singular: U[3,3] = 0
+> det(D)
+[1] 0
