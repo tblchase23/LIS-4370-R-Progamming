@@ -1,0 +1,40 @@
+data("iris")
+
+head(iris)
+plot(iris)
+summary(iris)
+residuals(iris)
+
+typeof(iris)
+
+isS4(iris)
+attributes(iris)
+
+###
+###S3 Object are considered "informal" and more "dynamic" (more user friendly) and aren't technically defined. It's more or less a list with a class name.  primarily use 
+
+### to determine type - "typeof"
+
+### Generic functions are more or less function "shells" that dispatch a method
+### and contain a "simpler" function like plot. In essence the look at the class 
+### and determine the appropriate methods.
+
+###S3 objects are older and much easier to work with, have implicit constructors, and can be made while building a list
+### while S4 requires more careful construction, is newer, and is less friendly with error checking (it checks more).
+
+s_1= list(name= "Chase", Hours = 60, Company = "True")
+class(s_1)= "candidate"
+s_2 = list(name = "Skyline", Make = "Nissan", Year = 1995)
+class(s_2)= "Car"
+
+attributes(s_1)
+attributes(s_2)
+
+setClass("car", representation(name = "character", Make = "character", Year = "numeric"))
+setClass("candidate", representation(name = "character", Hours = "numeric", company = "character"))
+
+s_3 <-new("car", name = "Supra", Make = "Toyota", Year = 1996)
+s_4 <- new("candidate", name = "Thomas", Hours = 50, company = "MLSE")
+
+s_3@Make
+s_4@Hours
