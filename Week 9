@@ -1,0 +1,24 @@
+install.packages("DAAG")
+library("DAAG")
+install.packages("Lattice")
+library(lattice)
+library(ggplot2)
+
+data("modelcars")
+
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point()
+
+plot(cars)
+
+xyplot(speed ~ dist, cars,
+       grid = TRUE)
+
+ggplot(modelcars, aes (x = distance.traveled, y = starting.point)) +
+  geom_bar(stat = "identity")
+
+plot(modelcars)
+
+xyplot(starting.point ~ distance.traveled, modelcars,
+       grid = TRUE, 
+       type = c("p", "smooth"), col.line = "darkorange", lwd = 2)
