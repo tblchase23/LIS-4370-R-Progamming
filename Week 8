@@ -1,0 +1,29 @@
+ install.packages("pryr")
+
+require(pryr)
+
+require(ISLR)
+
+require(boot)
+
+install.packages("plyr")
+
+library(data.table)
+
+library(plyr)
+
+
+
+Student<- read.table("Assignment 6 Dataset.txt", header = TRUE, sep = ",")
+
+
+
+Student_Average<- ddply(Student,"Sex", transform,Grade.Average=mean(Grade))
+
+                        
+
+write.table(Student_Average, "Student_Average", sep = " , ")
+
+i_students <- subset(Student, grepl("[iI]", Student$Name))
+
+write.table(i_students, "I Students", sep = ",")
