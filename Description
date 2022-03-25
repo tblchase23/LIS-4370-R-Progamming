@@ -1,0 +1,9 @@
+Package: Thomas
+
+Title: Allow for transformation of data on the metric to US customary units
+Version: 0.1
+Authors@R: "Chase Thomas <chase30@usf.edu> [aut, cre]"
+Description: This package allows the user the ability to go from feet to meters or feet to kilometers. This package can also convert between inches and measurements on the metric scale.
+Depends: R (>= 4.1.3)
+License: CC0
+LazyData: true
